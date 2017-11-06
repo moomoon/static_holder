@@ -1,0 +1,998 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+body .markdown-body {
+    padding: 45px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    word-wrap: break-word;
+}
+
+pre {
+    font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  color: #333;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body input {
+  font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.markdown-body a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body hr:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+.markdown-body .select::-ms-expand {
+  opacity: 0;
+}
+
+.markdown-body .octicon {
+  font: normal normal normal 16px/1 octicons-anchor;
+  display: inline-block;
+  text-decoration: none;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.markdown-body .octicon-link:before {
+  content: '\f05c';
+}
+
+.markdown-body:before {
+  display: table;
+  content: "";
+}
+
+.markdown-body:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h1 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 .anchor {
+  line-height: 1;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h3 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 .anchor {
+  line-height: 1.2;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h5 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body h6 .anchor {
+  line-height: 1.1;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+.markdown-body code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .pl-c {
+  color: #969896;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #0086b3;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #795da3;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #333;
+}
+
+.markdown-body .pl-ent {
+  color: #63a35c;
+}
+
+.markdown-body .pl-k {
+  color: #a71d5d;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #183691;
+}
+
+.markdown-body .pl-v {
+  color: #ed6a43;
+}
+
+.markdown-body .pl-id {
+  color: #b52a1d;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+.markdown-body .pl-ml {
+  color: #693a17;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mq {
+  color: #008080;
+}
+
+.markdown-body .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.markdown-body .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+.markdown-body .pl-mo {
+  color: #1d3e81;
+}
+
+.markdown-body kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+.markdown-body .plan-price-unit {
+  color: #767676;
+  font-weight: normal;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 0.35em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body .plan-choice {
+  padding: 15px;
+  padding-left: 40px;
+  display: block;
+  border: 1px solid #e0e0e0;
+  position: relative;
+  font-weight: normal;
+  background-color: #fafafa;
+}
+
+.markdown-body .plan-choice.open {
+  background-color: #fff;
+}
+
+.markdown-body .plan-choice.open .plan-choice-seat-breakdown {
+  display: block;
+}
+
+.markdown-body .plan-choice-free {
+  border-radius: 3px 3px 0 0;
+}
+
+.markdown-body .plan-choice-paid {
+  border-radius: 0 0 3px 3px;
+  border-top: 0;
+  margin-bottom: 20px;
+}
+
+.markdown-body .plan-choice-radio {
+  position: absolute;
+  left: 15px;
+  top: 18px;
+}
+
+.markdown-body .plan-choice-exp {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.markdown-body .plan-choice-seat-breakdown {
+  margin-top: 10px;
+  display: none;
+}
+
+.markdown-body :checked+.radio-label {
+  z-index: 1;
+  position: relative;
+  border-color: #4078c0;
+}
+</style><title>IGListKit</title></head><body><article class="markdown-body"><h1>
+<a id="user-content-用iglistkit构建可扩展的列表页面" class="anchor" href="#%E7%94%A8iglistkit%E6%9E%84%E5%BB%BA%E5%8F%AF%E6%89%A9%E5%B1%95%E7%9A%84%E5%88%97%E8%A1%A8%E9%A1%B5%E9%9D%A2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>用IGListKit构建可扩展的列表页面</h1>
+<p>UICollectionView是iOS上最常用的列表组件。它提供了一套十分灵活的API，但很多时候并不能直接完全满足我们的需求。今天我们将利用IGListKit搭建一个简单的应用，看看它能为我们的开发带来什么便利。</p>
+<h2>
+<a id="user-content-问题" class="anchor" href="#%E9%97%AE%E9%A2%98" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>问题</h2>
+<p>你是一位短视频创业者，现在要开发一个视频广场页面，页面中有两列视频缩略图，每个缩略图底部带有视频作者信息。用户点击缩略图后可以跳转到对应的视频详情页。
+作为一名熟练的iOS开发者，你在三十分钟内完成了这样的页面:</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">private</span> <span class="pl-k">var</span> items<span class="pl-k">:</span> [Item] <span class="pl-k">=</span> [] {
+  <span class="pl-k">didSet</span> {
+    <span class="pl-c"><span class="pl-c">//</span>有新数据时，刷新整个页面</span>
+<span class="pl-c"></span>    collectionView<span class="pl-k">?</span>.<span class="pl-c1">reloadData</span>()
+  }
+}
+
+<span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">viewDidLoad</span>() {
+  <span class="pl-c1">super</span>.<span class="pl-c1">viewDidLoad</span>()
+  <span class="pl-c"><span class="pl-c">//</span>在UICollectionView渲染之前，注册cell类型</span>
+<span class="pl-c"></span>  collectionView<span class="pl-k">?</span>.<span class="pl-c1">register</span>(ItemCell.<span class="pl-k">self</span>, <span class="pl-c1">forCellWithReuseIdentifier</span>: <span class="pl-s"><span class="pl-pds">"</span>cell<span class="pl-pds">"</span></span>)
+}
+
+<span class="pl-c"><span class="pl-c">//</span>返回cell数量</span>
+<span class="pl-c"></span><span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">collectionView</span>(<span class="pl-en">_</span> <span class="pl-smi">collectionView</span>: UICollectionView, <span class="pl-en">numberOfItemsInSection</span> <span class="pl-smi">section</span>: <span class="pl-c1">Int</span>) <span class="pl-k">-&gt;</span> <span class="pl-c1">Int</span> {
+  <span class="pl-k">return</span> items.<span class="pl-c1">count</span>
+}
+
+<span class="pl-c"><span class="pl-c">//</span>创建并配置cell</span>
+<span class="pl-c"></span><span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">collectionView</span>(<span class="pl-en">_</span> <span class="pl-smi">collectionView</span>: UICollectionView, <span class="pl-en">cellForItemAt</span> <span class="pl-smi">indexPath</span>: IndexPath) <span class="pl-k">-&gt;</span> UICollectionViewCell {
+  <span class="pl-k">let</span> cell <span class="pl-k">=</span> collectionView.<span class="pl-c1">dequeueReusableCell</span>(<span class="pl-c1">withReuseIdentifier</span>: <span class="pl-s"><span class="pl-pds">"</span>cell<span class="pl-pds">"</span></span>, <span class="pl-c1">for</span>: indexPath) <span class="pl-k">as!</span> ItemCell
+  cell.<span class="pl-c1">set</span>(<span class="pl-c1">item</span>: items[indexPath.<span class="pl-smi">item</span>])
+  <span class="pl-k">return</span> cell
+}
+<span class="pl-c"><span class="pl-c">//</span>处理用户点击</span>
+<span class="pl-c"></span><span class="pl-k">func</span> <span class="pl-en">collectionView</span>(<span class="pl-en">_</span> <span class="pl-smi">collectionView</span>: UICollectionView, <span class="pl-en">didSelectItemAt</span> <span class="pl-smi">indexPath</span>: IndexPath) {
+  items[indexPath.<span class="pl-smi">item</span>].<span class="pl-smi">video</span>.<span class="pl-c1">showDetail</span>(<span class="pl-c1">from</span>: <span class="pl-c1">self</span>)
+}
+
+<span class="pl-c"><span class="pl-c">//</span>计算cell尺寸</span>
+<span class="pl-c"></span><span class="pl-k">func</span> <span class="pl-en">collectionView</span>(<span class="pl-en">_</span> <span class="pl-smi">collectionView</span>: UICollectionView, <span class="pl-en">layout</span> <span class="pl-smi">collectionViewLayout</span>: UICollectionViewLayout, <span class="pl-en">sizeForItemAt</span> <span class="pl-smi">indexPath</span>: IndexPath) <span class="pl-k">-&gt;</span> CGSize {
+  <span class="pl-k">let</span> width <span class="pl-k">=</span> collectionView.<span class="pl-smi">bounds</span>.<span class="pl-smi">width</span> <span class="pl-k">/</span> <span class="pl-c1">2</span>
+  <span class="pl-k">return</span> <span class="pl-c1">CGSize</span>(<span class="pl-c1">width</span>: width, <span class="pl-c1">height</span>: width <span class="pl-k">+</span> <span class="pl-c1">20</span>)
+}
+</pre></div>
+<p>这是一个很标准的列表页面，只需展示一种类型的数据。所有Cell的配置信息都可以直接从数据源中获取。当有新数据插入时，我们仅仅直接调用reloadData(), 强制刷新整个页面。</p>
+<p>APP平稳运营了一段时间，用户量稳步上升，我们开始了第二版的开发工作。计划在广场上随机插入运营广告，并给平台上当天推荐的大V一个占满整个屏幕宽度的cell。碰巧有小伙伴提到下星期有个路演名额，但旧版本有些简陋，最好带着开发完成的新版本去展示。排来排去，广场的新需求只能在一个工作日内完成。过了两小时，类似这样的代码不停在项目里蔓延开来：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">enum</span> <span class="pl-en">ListItem</span> {
+  <span class="pl-c"><span class="pl-c">//</span>数据源有三种可能的格式</span>
+<span class="pl-c"></span>  <span class="pl-k">case</span> <span class="pl-c1">video</span>(Video), <span class="pl-c1">ad</span>(AD), <span class="pl-c1">vip</span>(Video)
+}
+
+<span class="pl-k">var</span> items<span class="pl-k">:</span> [ListItem] <span class="pl-k">=</span> [] {
+  <span class="pl-k">didSet</span> {
+    <span class="pl-c"><span class="pl-c">//</span>数据有变化时，直接刷新整个页面</span>
+<span class="pl-c"></span>    collectionView<span class="pl-k">?</span>.<span class="pl-c1">reloadData</span>()
+  }
+}
+
+<span class="pl-c"><span class="pl-c">//</span>根据数据源格式，执行三种不同的创建、配置cell逻辑</span>
+<span class="pl-c"></span><span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">collectionView</span>(<span class="pl-en">_</span> <span class="pl-smi">collectionView</span>: UICollectionView, <span class="pl-en">cellForItemAt</span> <span class="pl-smi">indexPath</span>: IndexPath) <span class="pl-k">-&gt;</span> UICollectionViewCell {
+  <span class="pl-k">let</span> cell<span class="pl-k">:</span> UICollectionViewCell
+  <span class="pl-k">switch</span> items[indexPath.<span class="pl-smi">item</span>] {
+  <span class="pl-k">case</span> <span class="pl-k">let</span> .<span class="pl-c1">video</span>(video)<span class="pl-k">:</span>
+     <span class="pl-k">let</span> cell <span class="pl-k">=</span> collectionView.<span class="pl-c1">dequeueReusableCell</span>(<span class="pl-c1">withReuseIdentifier</span>: <span class="pl-s"><span class="pl-pds">"</span>video<span class="pl-pds">"</span></span>, <span class="pl-c1">for</span>: indexPath) <span class="pl-k">as!</span> VideoCell
+      cell.<span class="pl-c1">set</span>(<span class="pl-c1">video</span>: video)
+      <span class="pl-k">return</span> cell
+ <span class="pl-k">case</span> <span class="pl-k">let</span> .<span class="pl-c1">ad</span>(ad)<span class="pl-k">:</span>
+     <span class="pl-k">let</span> cell <span class="pl-k">=</span> collectionView.<span class="pl-c1">dequeueReusableCell</span>(<span class="pl-c1">withReuseIdentifier</span>: <span class="pl-s"><span class="pl-pds">"</span>ad<span class="pl-pds">"</span></span>, <span class="pl-c1">for</span>: indexPath) <span class="pl-k">as!</span> ADCell
+      cell.<span class="pl-c1">set</span>(<span class="pl-c1">ad</span>: ad)
+      <span class="pl-k">return</span> cell
+ <span class="pl-k">case</span> <span class="pl-k">let</span> .<span class="pl-c1">vip</span>(video)<span class="pl-k">:</span>
+     <span class="pl-k">let</span> cell <span class="pl-k">=</span> collectionView.<span class="pl-c1">dequeueReusableCell</span>(<span class="pl-c1">withReuseIdentifier</span>: <span class="pl-s"><span class="pl-pds">"</span>vip<span class="pl-pds">"</span></span>, <span class="pl-c1">for</span>: indexPath) <span class="pl-k">as!</span> VIPCell
+      cell.<span class="pl-c1">set</span>(<span class="pl-c1">video</span>: video)
+      <span class="pl-k">return</span> cell
+  }
+}
+
+<span class="pl-c"><span class="pl-c">//</span>根据数据源格式，计算三种不同cell的尺寸</span>
+<span class="pl-c"></span><span class="pl-k">func</span> <span class="pl-en">collectionView</span>(<span class="pl-en">_</span> <span class="pl-smi">collectionView</span>: UICollectionView, <span class="pl-en">layout</span> <span class="pl-smi">collectionViewLayout</span>: UICollectionViewLayout, <span class="pl-en">sizeForItemAt</span> <span class="pl-smi">indexPath</span>: IndexPath) <span class="pl-k">-&gt;</span> CGSize {
+  <span class="pl-k">switch</span> items[indexPath.<span class="pl-smi">item</span>] {
+  <span class="pl-k">case</span> .<span class="pl-smi">video</span><span class="pl-k">:</span>
+    <span class="pl-k">let</span> width <span class="pl-k">=</span> collectionView.<span class="pl-smi">bounds</span>.<span class="pl-smi">width</span> <span class="pl-k">/</span> <span class="pl-c1">2</span>
+    <span class="pl-k">return</span> <span class="pl-c1">CGSize</span>(<span class="pl-c1">width</span>: width, <span class="pl-c1">height</span>: height <span class="pl-k">+</span> <span class="pl-c1">20</span>)
+  <span class="pl-k">case</span> .<span class="pl-smi">ad</span><span class="pl-k">:</span>
+    <span class="pl-k">return</span> <span class="pl-c1">CGSize</span>(<span class="pl-c1">width</span>: collectionView.<span class="pl-smi">bounds</span>.<span class="pl-smi">width</span>, <span class="pl-c1">height</span>: <span class="pl-c1">40</span>)
+  <span class="pl-k">case</span> .<span class="pl-smi">vip</span>
+    <span class="pl-k">return</span> <span class="pl-c1">CGSize</span>(<span class="pl-c1">width</span>: collectionView.<span class="pl-smi">bounds</span>.<span class="pl-smi">width</span>, <span class="pl-c1">height</span>: collectionView.<span class="pl-smi">bounds</span>.<span class="pl-smi">width</span> <span class="pl-k">/</span> <span class="pl-c1">2</span>)
+  }
+}
+
+<span class="pl-k">…</span></pre></div>
+<p>可以看到，每增加一种渲染的数据类型，都要修改多处分离的代码。很快整个项目就会变得十分难以理解和维护。怎样才能避免这样代码失控的情况出现呢？</p>
+<h2>
+<a id="user-content-iglistkit" class="anchor" href="#iglistkit" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>IGListKit</h2>
+<p>IGListKit是Instagram为UICollectionView推出的数据驱动框架，让程序员能创建更快、更灵活的列表页面。在IGListKit中，我们将不再直接控制UICollectionView，而是将所有数据以Section的方式提供给ListAdapter，然后只需调用performUpdates(animated:completion:)方法，就可以完成从渲染到动画的全部工作。</p>
+<p><a href="https://camo.githubusercontent.com/bd517dec7df436e1f010357ed0fa9583616d81f0/687474703a2f2f66696c652e62616978696e672e6e65742f3230313731312f37626564343663333462303337396464336261363362363265623363383236342e706e67" target="_blank"><img src="https://camo.githubusercontent.com/bd517dec7df436e1f010357ed0fa9583616d81f0/687474703a2f2f66696c652e62616978696e672e6e65742f3230313731312f37626564343663333462303337396464336261363362363265623363383236342e706e67" alt="GitHub Logo" data-canonical-src="http://file.baixing.net/201711/7bed46c34b0379dd3ba63b62eb3c8264.png" style="max-width:100%;"></a></p>
+<p>让我们用IGListKit重新实现一下上面的需求:</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">private</span> <span class="pl-k">let</span> dataSource<span class="pl-k">:</span> DataSource <span class="pl-k">=</span> .<span class="pl-k">init</span>()
+<span class="pl-k">lazy</span> <span class="pl-k">var</span> listAdapter<span class="pl-k">:</span> ListAdapter <span class="pl-k">=</span> {
+  <span class="pl-k">let</span> listAdapter <span class="pl-k">=</span> <span class="pl-c1">ListAdapter</span>(<span class="pl-c1">updater</span>: <span class="pl-c1">ListAdapterUpdater</span>(), <span class="pl-c1">viewController</span>: <span class="pl-c1">self</span>)
+  listAdapter.<span class="pl-smi">dataSource</span> <span class="pl-k">=</span> dataSource
+  <span class="pl-k">return</span> listAdapter
+}()
+
+<span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">viewDidLoad</span>() {
+  <span class="pl-c1">super</span>.<span class="pl-c1">viewDidLoad</span>()
+  listAdapter.<span class="pl-smi">collectionView</span> <span class="pl-k">=</span> collectionView
+}
+</pre></div>
+<p>IGListKit用ListAdapter替代了UICollectionViewDataSource以及UICollectionViewDelegate，并额外定义了一个ListAdapterUpdater用于重载对UICollectionView相关刷新方法的调用方式。</p>
+<div class="highlight highlight-source-swift"><pre>
+<span class="pl-k">private</span> <span class="pl-k">class</span> <span class="pl-en">DataSource</span>: <span class="pl-e">ListAdapterDataSource </span>{
+  <span class="pl-k">var</span> sections<span class="pl-k">:</span> [SectionItem] <span class="pl-k">=</span> []
+
+  <span class="pl-k">func</span> <span class="pl-en">objects</span>(<span class="pl-en">for</span> <span class="pl-smi">listAdapter</span>: ListAdapter) <span class="pl-k">-&gt;</span> [ListDiffable] {
+    <span class="pl-k">return</span> sections
+  }
+
+  <span class="pl-k">func</span> <span class="pl-en">listAdapter</span>(<span class="pl-en">_</span> <span class="pl-smi">listAdapter</span>: ListAdapter, <span class="pl-en">sectionControllerFor</span> <span class="pl-smi">object</span>: <span class="pl-c1">Any</span>) <span class="pl-k">-&gt;</span> ListSectionController {
+    <span class="pl-k">return</span> (object <span class="pl-k">as?</span> SectionControllerBounded)<span class="pl-k">?</span>.<span class="pl-c1">listAdapter</span>(listAdapter, <span class="pl-c1">sectionControntrollerFor</span>: <span class="pl-c1">self</span>) <span class="pl-k">??</span> <span class="pl-c1">ListSectionController</span>()
+  }
+
+  <span class="pl-k">func</span> <span class="pl-en">emptyView</span>(<span class="pl-en">for</span> <span class="pl-smi">listAdapter</span>: ListAdapter) <span class="pl-k">-&gt;</span> UIView<span class="pl-k">?</span> {
+    <span class="pl-k">return</span> <span class="pl-c1">nil</span>
+  }
+}
+</pre></div>
+<p>ListAdapterDataSource用于向ListAdapter提供数据以及ListSectionController。在这里我们可以遍历支持的数据类型并返回相应的ListSectionController，或者利用协议将创建过程分发到对应类型.</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">protocol</span> <span class="pl-en">SectionControllerBounded</span> {
+  <span class="pl-k">func</span> <span class="pl-en">listAdapter</span>(<span class="pl-en">_</span> <span class="pl-smi">listAdapter</span>: ListAdapter, <span class="pl-en">sectionControntrollerFor</span> <span class="pl-smi">dataSource</span>: ListAdapterDataSource) <span class="pl-k">-&gt;</span> ListSectionController
+}
+
+<span class="pl-k">typealias</span> <span class="pl-en">SectionItem</span> <span class="pl-k">=</span> ListDiffable <span class="pl-k">&amp;</span> SectionControllerBounded
+</pre></div>
+<p>ListSectionController负责渲染列表中的一块区域，其中包含数量不定的cell，以及一些辅助或者装饰性视图。在这里，我们需要提供渲染Cell的方法，以及一些额外的辅助信息。</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">class</span> <span class="pl-en">ADSectionController</span>: <span class="pl-e">ListSectionController </span>{
+  <span class="pl-k">var</span> sectionItem<span class="pl-k">:</span> ADSectionItem<span class="pl-k">!</span>
+  <span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">cellForItem</span>(<span class="pl-en">at</span> <span class="pl-smi">index</span>: <span class="pl-c1">Int</span>) <span class="pl-k">-&gt;</span> UICollectionViewCell {
+    <span class="pl-k">let</span> cell <span class="pl-k">=</span> collectionContext<span class="pl-k">!</span>.<span class="pl-c1">dequeueReusableCell</span>(<span class="pl-c1">of</span>: ADCell.<span class="pl-k">self</span>, <span class="pl-c1">for</span>: <span class="pl-c1">self</span>, <span class="pl-c1">at</span>: index) <span class="pl-k">as!</span> ADCell
+    cell.<span class="pl-c1">set</span>(<span class="pl-c1">item</span>: sectionItem.<span class="pl-smi">item</span>)
+    <span class="pl-k">return</span> cell
+  }
+  <span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">didUpdate</span>(<span class="pl-en">to</span> <span class="pl-smi">object</span>: <span class="pl-c1">Any</span>) {
+    sectionItem <span class="pl-k">=</span> object <span class="pl-k">as!</span> ADSectionItem
+    <span class="pl-c1">super</span>.<span class="pl-c1">didUpdate</span>(<span class="pl-c1">to</span>: object)
+  }
+}</pre></div>
+<p>很自然地, 我们可以在ListSectionController上设置段落缩进，行间距，Cell间距等信息：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">override</span> <span class="pl-k">init</span>() {
+  <span class="pl-c1">super</span>.<span class="pl-k">init</span>()
+  inset <span class="pl-k">=</span> <span class="pl-c1">UIEdgeInsets</span>(<span class="pl-c1">top</span>: <span class="pl-c1">0</span>, <span class="pl-c1">left</span>: <span class="pl-c1">8</span>, <span class="pl-c1">bottom</span>: <span class="pl-c1">0</span>, <span class="pl-c1">right</span>: <span class="pl-c1">8</span>)
+  minimumLineSpacing <span class="pl-k">=</span> <span class="pl-c1">8</span>
+  minimumInteritemSpacing <span class="pl-k">=</span> <span class="pl-c1">8</span>
+}</pre></div>
+<p>如果一个ListSectionController的view model可以一直拆分到Cell等级，我们还可以利用ListBindingSectionController简化Cell的配置过程：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">class</span> <span class="pl-en">VideoSectionController</span>: <span class="pl-e">ListBindingSectionController&lt;ChunkOfVideos&gt;</span>, <span class="pl-e">ListBindingSectionControllerDataSource</span>
+ {
+  <span class="pl-k">override</span> <span class="pl-k">init</span>() {
+    <span class="pl-c1">super</span>.<span class="pl-k">init</span>()
+    <span class="pl-c"><span class="pl-c">//</span>所有管理view model和cell的方法都由dataSource提供</span>
+<span class="pl-c"></span>    <span class="pl-c1">self</span>.<span class="pl-smi">dataSource</span> <span class="pl-k">=</span> <span class="pl-c1">self</span>
+  }
+
+  <span class="pl-c"><span class="pl-c">//</span>返回cell 的view model</span>
+<span class="pl-c"></span>  <span class="pl-k">func</span> <span class="pl-en">sectionController</span>(<span class="pl-en">_</span> <span class="pl-smi">sectionController</span>: ListBindingSectionController&lt;ListDiffable&gt;, <span class="pl-en">viewModelsFor</span> <span class="pl-smi">object</span>: <span class="pl-c1">Any</span>) <span class="pl-k">-&gt;</span> [ListDiffable] {
+    <span class="pl-k">guard</span> <span class="pl-k">let</span> chunk <span class="pl-k">=</span> object <span class="pl-k">as?</span> ChunkOfVideos <span class="pl-k">else</span> { <span class="pl-k">return</span> [] }
+    <span class="pl-k">return</span> chunk.<span class="pl-smi">videos</span>
+  }
+
+  <span class="pl-c"><span class="pl-c">//</span>返回的cell需要继承ListBindable协议，用以绑定view model</span>
+<span class="pl-c"></span>  <span class="pl-k">func</span> <span class="pl-en">sectionController</span>(<span class="pl-en">_</span> <span class="pl-smi">sectionController</span>: ListBindingSectionController&lt;ListDiffable&gt;, <span class="pl-en">cellForViewModel</span> <span class="pl-smi">viewModel</span>: <span class="pl-c1">Any</span>, <span class="pl-en">at</span> <span class="pl-smi">index</span>: <span class="pl-c1">Int</span>) <span class="pl-k">-&gt;</span> UICollectionViewCell <span class="pl-k">&amp;</span> ListBindable {
+    <span class="pl-k">return</span> collectionContext<span class="pl-k">!</span>.<span class="pl-c1">dequeueReusableCell</span>(<span class="pl-c1">of</span>: VideoCell.<span class="pl-k">self</span>, <span class="pl-c1">for</span>: <span class="pl-c1">self</span>, <span class="pl-c1">at</span>: index) <span class="pl-k">as!</span> VideoCell
+  }
+
+  <span class="pl-c"><span class="pl-c">//</span>计算cell大小</span>
+<span class="pl-c"></span>  <span class="pl-k">func</span> <span class="pl-en">sectionController</span>(<span class="pl-en">_</span> <span class="pl-smi">sectionController</span>: ListBindingSectionController&lt;ListDiffable&gt;, <span class="pl-en">sizeForViewModel</span> <span class="pl-smi">viewModel</span>: <span class="pl-c1">Any</span>, <span class="pl-en">at</span> <span class="pl-smi">index</span>: <span class="pl-c1">Int</span>) <span class="pl-k">-&gt;</span> CGSize {
+    <span class="pl-k">return</span> fixedCellSize
+  }
+}</pre></div>
+<p>在ListBindingSectionControllerDataSource中，我们只需要提供一系列view model，一个创建Cell的方法和一个返回Cell大小的方法，IGListKit就会自动管理并配置相应Section的渲染过程。值得注意的是，在普通的ListSectionController中，IGListKit只是简单地把Cell的相关创建请求和事件分发下来，而在ListBindingSectionController中，IGListKit可以知道Cell将要表达的数据本身，从而能更精确地计算列表的改变。</p>
+<p>当我们的Section内部有额外的层级关系时，我们可以用ListStackedSectionController将这种关系反映在代码上：
+let sectionController = ListStackedSectionController(sectionControllers: [VideoSectionController(), ADSectionController()])</p>
+<p>在这里，我们将一个由视频和广告组合而成的Section一分为二，这样在它们内部就不需要做额外的类型判断，提高了代码的可维护性。ListStackedSectionController在内部计算了所有子SectionController的项目数量以及在Section中的偏移量，并将所有的事件按照偏移量分发到对应的SectionController中。事实上，我们可以组合出无限多的层级。但需要注意的是，这些额外的层级只负责子视图的渲染，对于UICollectionView来说是不可见的，不能分别设置缩进等信息。</p>
+<p>前后对比，在使用IGListKit之后，我们将数据渲染逻辑完全剥离开来，变成一系列可选插件。每次我们要添加新的渲染数据类型，只要创建相应的Cell和SectionController，并通过协议或者方法绑定数据源即可，不会对页面本身的逻辑产生任何影响。</p>
+<h2>
+<a id="user-content-代理" class="anchor" href="#%E4%BB%A3%E7%90%86" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>代理</h2>
+<p>在Cocoa传统中，代理对象通常会被存储在delegate属性上，而且父类和子类常常会共用这一个属性。不论是否合理，这是苹果开发者社区中最常见的做法。
+由于IGListKit要将datasource和delegate的方法都分发到对应的ListSectionController中，它必须要占用UICollectionView的Delegate属性。这时候，如果我们想截获一些UIViewController的变化事件，又不想写丑陋的KVO，该怎么办呢？
+IGListKit在ListAdapter上提供了scrollViewDelegate和collectionViewDelegate这两个属性。望文生义，前者似乎能截获ScrollView相关的事件，后者应该能充当UICollectionView的代理。
+但其实在这里，ListAdapter的行为非常微妙。当我们没有设置任何代理时，ListAdapter会将自己设置到UICollectionView的delegate上，而一旦我们设置了上述两个代理的任意一个，ListAdapter就会创建一个NSProxy对象，将事件分发到自身或两个代理其中之一。由于ListAdapter要保证框架的正确运行，它会强制截获一系列的事件，具体列表如下：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">static</span> BOOL <span class="pl-c1">isInterceptedSelector</span>(SEL sel) {
+  <span class="pl-k">return</span> (
+          <span class="pl-c"><span class="pl-c">//</span> UICollectionViewDelegate</span>
+<span class="pl-c"></span>          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>didSelectItemAtIndexPath<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>willDisplayCell<span class="pl-k">:</span>forItemAtIndexPath<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>didEndDisplayingCell<span class="pl-k">:</span>forItemAtIndexPath<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          <span class="pl-c"><span class="pl-c">//</span> UICollectionViewDelegateFlowLayout</span>
+<span class="pl-c"></span>          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>layout<span class="pl-k">:</span>sizeForItemAtIndexPath<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>layout<span class="pl-k">:</span>insetForSectionAtIndex<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>layout<span class="pl-k">:</span>minimumInteritemSpacingForSectionAtIndex<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>layout<span class="pl-k">:</span>minimumLineSpacingForSectionAtIndex<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>layout<span class="pl-k">:</span>referenceSizeForFooterInSection<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(collectionView<span class="pl-k">:</span>layout<span class="pl-k">:</span>referenceSizeForHeaderInSection<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          <span class="pl-c"><span class="pl-c">//</span> UIScrollViewDelegate</span>
+<span class="pl-c"></span>          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(scrollViewDidScroll<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(scrollViewWillBeginDragging<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(scrollViewDidEndDragging<span class="pl-k">:</span>willDecelerate<span class="pl-k">:</span>) <span class="pl-k">||</span>
+          sel <span class="pl-k">==</span> <span class="pl-k">@selector</span>(scrollViewDidEndDecelerating<span class="pl-k">:</span>)
+          );
+}</pre></div>
+<p>对于以上事件，ListAdapter都会在截获之后，分别分发到section controller或者代理上。
+接下来我们要将之前的大V cell扩展成一整个Section，展示大V的多个作品，Section顶部展示头像姓名，并且可以配置Section背景。
+在SectionController中，header是由supplementaryViewSource来控制的，我们只需要像在UICollectionViewDataSource中一样返回一个UICollectionReusableView即可。
+关于如何处理Section背景，iOS并没有默认的官方支持。但是我们可以利用UICollectionViewLayout 中的DecorationView概念，在对应的Section底部插入一个View（事实上，这是一种非常流行的做法）。至于如何设置这个背景View，当然又要依赖UICollectionView的delegate了。考虑到Section背景应该要关联到Section数据本身，我们应该将设置方法分发到SectionController中，这样就要求delegate要能引用ListAdapter实例。
+这时候我们有两种选择：1、在ListAdapter上添加扩展。这样我们可以直接让ListAdapter遵循协议，很适合配合第三方UICollectionViewLayout使用。但使用这种方法时，我们就不能在ListAdapter上设置其他的代理。2、在ListAdapter的两个代理之一上设置一个变量，同时该变量能引用ListAdapter本身。
+当然由于IGListKit是用OC编写的，我们总是可以向runtime寻求帮助，但在本文中就不展开讨论了。
+一个可能的实现如下：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">class</span> <span class="pl-en">Layout</span>: <span class="pl-e">UICollectionViewFlowLayout </span>{
+  <span class="pl-k">override</span> <span class="pl-k">func</span> <span class="pl-en">layoutAttributesForDecorationView</span>(<span class="pl-en">ofKind</span> <span class="pl-smi">elementKind</span>: <span class="pl-c1">String</span>, <span class="pl-en">at</span> <span class="pl-smi">indexPath</span>: IndexPath) <span class="pl-k">-&gt;</span> UICollectionViewLayoutAttributes<span class="pl-k">?</span> {
+    <span class="pl-k">let</span> superLayoutAttributes <span class="pl-k">=</span> <span class="pl-c1">super</span>.<span class="pl-c1">layoutAttributesForDecorationView</span>(<span class="pl-c1">ofKind</span>: elementKind, <span class="pl-c1">at</span>: indexPath)
+    <span class="pl-k">guard</span> <span class="pl-k">let</span> delegate <span class="pl-k">=</span> collectionView<span class="pl-k">?</span>.<span class="pl-smi">delegate</span>, delegate.<span class="pl-c1">responds</span>(<span class="pl-c1">to</span>: <span class="pl-c1">#selector</span>(Delegate.<span class="pl-en">layoutAttributesForDecorationView</span>(<span class="pl-en">ofKind:at:overriding:</span>))) <span class="pl-k">else</span> { <span class="pl-k">return</span> superLayoutAttributes }
+    <span class="pl-k">return</span> (delegate <span class="pl-k">as</span> <span class="pl-c1">AnyObject</span>).<span class="pl-c1">layoutAttributesForDecorationView</span>(<span class="pl-c1">ofKind</span>: elementKind, <span class="pl-c1">at</span>: indexPath, <span class="pl-c1">overriding</span>: superLayoutAttributes)
+  }
+}
+
+<span class="pl-k">class</span> <span class="pl-en">Delegate</span> : <span class="pl-e">NSObject</span>, <span class="pl-e">UICollectionViewDelegate </span>{
+  <span class="pl-k">weak</span> <span class="pl-k">var</span> adapter<span class="pl-k">:</span> ListAdapter<span class="pl-k">?</span>
+  <span class="pl-k">@objc</span> <span class="pl-k">func</span> <span class="pl-en">layoutAttributesForDecorationView</span>(<span class="pl-en">ofKind</span> <span class="pl-smi">elementKind</span>: <span class="pl-c1">String</span>, <span class="pl-en">at</span> <span class="pl-smi">indexPath</span>: IndexPath, <span class="pl-en">overriding</span> <span class="pl-smi">layoutAttributes</span>: UICollectionViewLayoutAttributes<span class="pl-k">?</span>) <span class="pl-k">-&gt;</span> UICollectionViewLayoutAttributes<span class="pl-k">?</span> {
+    <span class="pl-k">return</span> <span class="pl-c"><span class="pl-c">//</span>从section controller中获得背景数据</span>
+<span class="pl-c"></span>  }
+}</pre></div>
+<h2>
+<a id="user-content-动画" class="anchor" href="#%E5%8A%A8%E7%94%BB" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>动画</h2>
+<p>iOS的动画一直是最令开发者满意的特性之一，在UICollectionView上的表现也同样出色。我们只要将数据源的增加，删除，更新和移动变化告知UICollectionView，它就会自动帮我们配置相应的关键帧动画。
+但问题是，数据源中包含各种不同结构的项目，我们怎么才能计算出数据的变化呢？
+IGListKit内置了一个diff算法, 任何类型只要继承了ListDiffable 协议，就可以使用IGListDiffXXX相关函数计算出前后两个序列之间的相互关系。同时IGListKit要求所有的view model都实现ListDiffable协议，这样在主线程任何地方，只要ListAdapterDatasource中的内容被修改，我们就可以调用ListAdapter上的performUpdates(animated:completion)方法，来自动补全对应动画。ListDiffable协议的定义如下</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">public</span> <span class="pl-k">protocol</span> <span class="pl-en">ListDiffable</span>: <span class="pl-e">NSObjectProtocol </span>{
+  <span class="pl-k">public</span> <span class="pl-k">func</span> <span class="pl-en">diffIdentifier</span>() <span class="pl-k">-&gt;</span> NSObjectProtocol
+  <span class="pl-k">public</span> <span class="pl-k">func</span> <span class="pl-en">isEqual</span>(<span class="pl-en">toDiffableObject</span> <span class="pl-smi">object</span>: ListDiffable<span class="pl-k">?</span>) <span class="pl-k">-&gt;</span> <span class="pl-c1">Bool</span>
+} </pre></div>
+<p>很容易就可以发现，这几乎就是Hashable协议的翻版：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-k">public</span> <span class="pl-k">protocol</span> <span class="pl-en">Hashable</span> : <span class="pl-e"><span class="pl-c1">Equatable</span> </span>{
+  <span class="pl-k">public</span> <span class="pl-k">var</span> hashValue<span class="pl-k">:</span> <span class="pl-c1">Int</span> { <span class="pl-k">get</span> }
+  <span class="pl-k">public</span> <span class="pl-k">static</span> <span class="pl-k">func</span> <span class="pl-en">==</span>(<span class="pl-smi"><span class="pl-en">lhs</span></span>: <span class="pl-c1">Self</span>, <span class="pl-smi"><span class="pl-en">rhs</span></span>: <span class="pl-c1">Self</span>) <span class="pl-k">-&gt;</span> <span class="pl-c1">Bool</span>
+}</pre></div>
+<p>很自然地，我们可以猜测到IGListKit在Diff算法内部应该有一个查找表，以diffIdentifier为键关联新旧数据。但假如键有冲突，Diff的行为会是怎样呢？带着疑问我们来看一下代码：</p>
+<div class="highlight highlight-source-swift"><pre><span class="pl-c"><span class="pl-c">//</span>IGListDiff.mm</span>
+<span class="pl-c"></span><span class="pl-k">static</span> id <span class="pl-c1">IGListDiffing</span>(<span class="pl-k">...</span>
+                        NSArray<span class="pl-k">&lt;</span>id<span class="pl-k">&lt;</span>IGListDiffable<span class="pl-k">&gt;&gt;</span> <span class="pl-k">*</span>oldArray,
+                        NSArray<span class="pl-k">&lt;</span>id<span class="pl-k">&lt;</span>IGListDiffable<span class="pl-k">&gt;&gt;</span> <span class="pl-k">*</span>newArray,
+                        <span class="pl-k">...</span>) {
+  <span class="pl-k">...</span>
+  <span class="pl-c"><span class="pl-c">//</span>这应该就是之前提到的查找表了</span>
+<span class="pl-c"></span>  unordered_map<span class="pl-k">&lt;</span>id<span class="pl-k">&lt;</span>NSObject<span class="pl-k">&gt;</span>, IGListEntry, IGListHashID, IGListEqualID<span class="pl-k">&gt;</span> table;
+  <span class="pl-k">...</span>
+
+  vector<span class="pl-k">&lt;</span>IGListRecord<span class="pl-k">&gt;</span> <span class="pl-c1">oldResultsArray</span>(oldArray.<span class="pl-c1">count</span>);
+  <span class="pl-c"><span class="pl-c">//</span>降序遍历</span>
+<span class="pl-c"></span>  <span class="pl-k">for</span> (NSInteger i <span class="pl-k">=</span> oldCount <span class="pl-k">-</span> <span class="pl-c1">1</span>; i <span class="pl-k">&gt;=</span> <span class="pl-c1">0</span>; i<span class="pl-k">--</span>) {
+      id<span class="pl-k">&lt;</span>NSObject<span class="pl-k">&gt;</span> key <span class="pl-k">=</span> <span class="pl-c1">IGListTableKey</span>(oldArray[i]);
+      IGListEntry <span class="pl-k">&amp;</span>entry <span class="pl-k">=</span> table[key];
+      <span class="pl-c"><span class="pl-c">//</span>记录下数据在旧序列中的位置，由于是降序遍历，靠前的位置会较靠近栈顶</span>
+<span class="pl-c"></span>      entry.<span class="pl-smi">oldIndexes</span>.<span class="pl-c1">push</span>(i);
+  }
+
+  <span class="pl-c"><span class="pl-c">//</span>升序遍历新序列，逐个关联旧序列中的位置</span>
+<span class="pl-c"></span>  <span class="pl-k">for</span> (NSInteger i <span class="pl-k">=</span> <span class="pl-c1">0</span>; i <span class="pl-k">&lt;</span> newCount; i<span class="pl-k">++</span>) {
+    <span class="pl-k">...</span>
+  }
+  <span class="pl-k">...</span>
+}</pre></div>
+<p>所以当不同项目返回了相同的diffIdentifier时，IGListKit会从序列初始端开始逐个匹配，到末端仍未匹配上的项目会被标记为新插入或是已删除。
+在实际应用场景中，大多数的列表都会将新项目插入到整个列表的顶部，如果这时候多个项目返回了相同的diffIdentifier，将会导致这一系列项目的动画计算错误。要想绕过这个问题也很简单，我们只要继承ListSectionController，在didUpdate(to:)方法中，将数据源反序输入diff算法，再将返回结果反序并据此处理动画即可。</p>
+<h2>
+<a id="user-content-总结" class="anchor" href="#%E6%80%BB%E7%BB%93" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>总结：</h2>
+<p>IGListKit很好地解决了UICollectionView中数据源类型的横向拓展问题，同时还额外地管理了过渡动画和cell类型注册。此外，作为一个用Objective-C编写的框架，IGListKit也在命名和文档等方面为适应Swift做了很多工作。但不论怎么说，在现有的UI组件上进行再度封装，总会不可避免地带来一些不便。这一点在应用框架前应当仔细权衡。</p>
+</article></body></html>
